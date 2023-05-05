@@ -46,7 +46,7 @@ a {
   font-size: 17px;
 
 }
-.btn1 {
+.btn1,.btn2,.btn3,.btn4 {
   cursor: pointer;
   padding: 5px 15px;
   background: var(--light-color);
@@ -56,6 +56,7 @@ a {
 border-radius: 20px;
 margin-top: 20px;
 width: 100%;
+text-align: center;
 }
 /* Chat Page */
 
@@ -155,6 +156,7 @@ width: 100%;
 
 /* Join Page */
 .join-container {
+  display: block;
   max-width: 500px;
   margin: 80px auto;
   color: #000000;
@@ -164,10 +166,30 @@ width: 100%;
     0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
     transition: box-shadow 0.1s, transform 0.1s;
 }
-.join-container:hover {
+/* .join-container:hover {
   box-shadow: 0px 0px 30px rgba(0,0,0, 0.6);
   cursor: pointer;
+} */
+
+.join-container1 {
+  display: none;
+  max-width: 500px;
+  margin: 80px auto;
+  color: #000000;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
+    0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11),
+    0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
+    transition: box-shadow 0.1s, transform 0.1s;
 }
+/* .join-container1:hover {
+  box-shadow: 0px 0px 30px rgba(0,0,0, 0.6);
+  cursor: pointer;
+} */
+
+
+
+
 .join-header {
   text-align: center;
   padding: 20px;
