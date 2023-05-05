@@ -65,19 +65,91 @@
       signinBtn.classList.add("disable");
     };
 
-   
-    let allUserData = JSON.parse(localStorage.getItem("users")) || [];
-    signupBtn.addEventListener("submit",(e)=>{
-      e.preventDefault();
-      const formData = {
-      name : nameField.value,
-      email : email.value,
-      password : password.value,
-    };
-    allUserData.push(formData);
-    localStorage.setItem("users", JSON.stringify(allUserData));
 
-    window.location.href = ""
-    });
+
+    // signup code------------------------------->
+   signupBtn.addEventListener("click", function (e) {
+
+ console.log("Hello")
+     
+  
+      e.preventDefault();
+  
+    let UserName=  nameField.value;
+     let Email = email.value;
+     let Password = password.value;
+  
+      registerUser(UserName,  Email, Password);
+    
+  });
+
+
+  function registerUser(UserName,  Email, Password) {
+    
+  fetch("https://real-pink-bass-hose.cyclic.app/user/register", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name: UserName,
+      email: Email,
+      password: Password,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) =>{
+    console.log(data)
+    alert(data.Message)
+    })
+    .catch((error) => console.error(error));
+}
+
+// --------------------------------------------------------------------------------------------
+
+
+
+// signin code
+
+
+signinBtn.addEventListener("click", function (e) {
+  
+      // alert("Login User Successfully");
+  
+      e.preventDefault();
+  
+      let UserName =email.value;
+     
+      let Password = password.value;
+  
+      registerUser1(UserName, Password);
+   
+  });
+  
+  function registerUser1(UserName, Password) {
+    fetch("https://real-pink-bass-hose.cyclic.app/user/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+       email: UserName,
+        password: Password
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) =>{console.log(data)
+        alert(data.msg)
+     localStorage.setItem("token",data.token)
+     window.self("index.html");
+     
+      } )
+      .catch((error) => console.error(error));
+  }
+
+
+
+
+    
   </script>
 </html>
