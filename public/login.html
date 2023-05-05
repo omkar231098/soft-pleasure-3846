@@ -19,7 +19,7 @@
           <div class="input-group">
             <div class="input-field" id="nameField">
               <i class="fa-solid fa-user"></i>
-              <input type="text" placeholder="Name" />
+              <input type="text" id="name" placeholder="Name" />
             </div>
             <div class="input-field">
               <i class="fa-solid fa-envelope"></i>
@@ -46,6 +46,7 @@
     let signupBtn = document.getElementById("signupBtn");
     let signinBtn = document.getElementById("signinBtn");
     let nameField = document.getElementById("nameField");
+    let name= document.getElementById("name")
     let title = document.getElementById("title");
     let formEl = document.querySelector("form");
     let email = document.querySelector("#email");
@@ -75,7 +76,7 @@
   
       e.preventDefault();
   
-    let UserName=  nameField.value;
+    let UserName=  name.value;
      let Email = email.value;
      let Password = password.value;
   
@@ -85,8 +86,8 @@
 
 
   function registerUser(UserName,  Email, Password) {
-    
-  fetch("https://real-pink-bass-hose.cyclic.app/user/register", {
+    // https://real-pink-bass-hose.cyclic.app/user/register
+  fetch("http://localhost:3000/user/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -127,7 +128,8 @@ signinBtn.addEventListener("click", function (e) {
   });
   
   function registerUser1(UserName, Password) {
-    fetch("https://real-pink-bass-hose.cyclic.app/user/login", {
+    // https://real-pink-bass-hose.cyclic.app/user/login
+    fetch("http://localhost:3000/user/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
