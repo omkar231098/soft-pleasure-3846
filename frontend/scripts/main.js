@@ -11,7 +11,7 @@ const room = urlParams.get("room");
 
 
 
-const socket = io("wss://nebulous-paint-acai.glitch.me/socket.io/",{transports:["websocket"]});
+const socket = io("http://localhost:8080/",{transports:["websocket"]});
 
 socket.emit("joinRoom",({username,room}));
 
