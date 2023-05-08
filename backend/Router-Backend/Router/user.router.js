@@ -89,46 +89,12 @@ res.status(500).json({ message: 'Server error' });
 }
 });
 
-// router.post('/refresh', async (req, res) => {
-// const refreshToken = req.body.refreshToken;
-
-// if (!refreshToken) {
-// return res.status(401).json({ message: 'Refresh token not found' });
-// }
-
-// try {
-// const blacklistedToken = await BlacklistToken.findOne({ token: refreshToken });
 
 
-// if (blacklistedToken) {
-//   return res.status(403).json({ message: 'Refresh token has been revoked' });
-// }
 
-// jwt.verify(refreshToken, REFRESH_TOKEN_SECRET, (err, user) => {
-//   if (err) {
-//     return res.status(403).json({ message: 'Invalid refresh token' });
-//   }
+// router.get('/g', authenticateToken , (req, res) => {
+//     res.send('access')
+// })
 
-//   const accessToken = jwt.sign({ id: user._id }, JWT_SECRET, {
-//     expiresIn: JWT_EXPIRATION_TIME,
-//   });
-
-//   res.json({ accessToken });
-// });
-// } catch (error) {
-// console.error(error);
-// res.status(500).json({ message: 'Server error' });
-// }
-// });
-
-// 
-
-
-// 
-
-router.get('/g', authenticateToken , (req, res) => {
-    res.send('access')
-})
-// 
 
 module.exports= router
