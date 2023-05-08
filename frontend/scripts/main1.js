@@ -9,10 +9,10 @@ const urlParams =  new URLSearchParams(window.location.search)
 const username = urlParams.get('username');
 const room = urlParams.get("room");
 
-wss://nebulous-paint-acai.glitch.me/socket.io/?EIO=4&transport=websocket
+
 
 const socket = io("http://localhost:8080/",{transports:["websocket"]});
-// https://nebulous-paint-acai.glitch.me
+
 socket.emit("joinRoom",({username,room}));
 
 socket.on("message",(message)=>{
