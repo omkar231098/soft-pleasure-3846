@@ -68,7 +68,7 @@ registerUserButton.addEventListener("click", function (e) {
   function registerUser(UserName,  email, Password) {
     // http://localhost:3000/user/register
     //
-  fetch("https://real-pink-bass-hose.cyclic.app/user/register", {
+  fetch(" http://localhost:3000/user/register", {
     
     method: "POST",
     headers: {
@@ -109,7 +109,7 @@ LoginUserButton.addEventListener("click", function (e) {
     // 
     // http://localhost:3000/user/login
     // 
-    fetch("https://real-pink-bass-hose.cyclic.app/user/login", {
+    fetch("http://localhost:3000/user/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -122,7 +122,7 @@ LoginUserButton.addEventListener("click", function (e) {
       .then((response) => response.json())
       .then((data) =>{console.log(data)
      localStorage.setItem("token",data.token)
-     window.open("index.html");
+     window.open("./main.html");
      
       } )
       .catch((error) => console.error(error));
