@@ -22,6 +22,10 @@
   <h1> Register Page</h1>
 
 ![2023-05-13 (1)](https://github.com/omkar231098/soft-pleasure-3846/assets/109202596/f49f73d7-1a61-4943-b15a-d09a354423ed)
+
+
+  
+  
   
 
 
@@ -31,6 +35,12 @@
 
 
   <h1>Indivisual Chat Page</h1>
+
   
   
   ![2023-05-13 (3)](https://github.com/omkar231098/soft-pleasure-3846/assets/109202596/e5ed11b9-874d-435d-8857-dc20c0d0c4c9)
+  
+  
+   <h1> Video Call Page</h1>
+  
+  ![2023-05-13 (4)](https://github.com/omkar231098/soft-pleasure-3846/assets/109202596/ee655fed-75cd-485c-88d7-166343802a00)
