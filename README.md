@@ -4,7 +4,7 @@
 
 <h3>Tech Stack Used :- HTML ,CSS Javascript, Express, MongoDB, NodeJS, </h3>
 
-<h2>Team Members</h2>
+<h3>Team Members</h3>
 
 <ol type="1">
   <li>Omkar Dhanave</li>
