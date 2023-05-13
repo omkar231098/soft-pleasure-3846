@@ -4,6 +4,14 @@
 
 <h3>Tech Stack Used :- HTML ,CSS Javascript, Express, MongoDB, NodeJS, </h3>
 
+<h2>Team Members</h2>
+
+<ol type="1">
+  <li>Omkar Dhanave</li>
+  <li>Rajneesh Yadav</li>
+  <li>Kamal Preet Kaur</li>
+</ol>  
+
   <h1> Login Page</h1>
   
   ![2023-05-13](https://github.com/omkar231098/soft-pleasure-3846/assets/109202596/0c1ea835-72e1-4547-84d7-d3f1d7707e48)
